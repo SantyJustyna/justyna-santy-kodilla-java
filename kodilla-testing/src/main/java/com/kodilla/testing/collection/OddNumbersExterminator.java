@@ -16,3 +16,4 @@ public class OddNumbersExterminator {
         return result;
     }
 }
+
