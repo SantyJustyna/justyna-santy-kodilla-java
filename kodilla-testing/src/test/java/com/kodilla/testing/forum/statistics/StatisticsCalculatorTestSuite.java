@@ -35,8 +35,7 @@ public class StatisticsCalculatorTestSuite {
         when(statisticsMock.usersNames()).thenReturn(sampleList1);
         when(statisticsMock.postsCount()).thenReturn(0);
         when(statisticsMock.commentsCount()).thenReturn(0);
-
-
+        
         //When
         calculator.calculateAdvStatistics(statisticsMock);
 
