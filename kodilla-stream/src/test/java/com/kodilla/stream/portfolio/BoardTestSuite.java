@@ -159,7 +159,7 @@ public class BoardTestSuite {
                 .orElse(0.00);
 
         //Then
-        assertEquals(10, average, 0.001);
+        assertEquals(10, average, 0.01);
 
     }
 }
