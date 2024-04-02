@@ -16,7 +16,7 @@ public class FlightSearchRunner {
 
 
         FlightSearch flightSearch = new FlightSearch(airports);
-        Flight flight1 = new Flight("Madrid", "Paris");
+        Flight flight1 = new Flight("Paris", "dhgsdh");
 
         try {
             flightSearch.findFlight(flight1);
