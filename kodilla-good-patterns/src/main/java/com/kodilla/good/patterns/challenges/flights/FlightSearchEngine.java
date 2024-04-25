@@ -49,7 +49,7 @@ public class FlightSearchEngine {
 
         System.out.println(engine.findFlightsFrom(new FlightList(), "Gdańsk"));
         System.out.println(engine.findFlightsTo(new FlightList(), "Kraków"));
-        System.out.println(engine.findFlightThrought(new FlightList(), "Gdańsk", "Warszawa", "Kraków"));
+        System.out.println(engine.findFlightThrought(new FlightList(), "Warszawa", "Kraków", "Poznań"));
 
     }
 
