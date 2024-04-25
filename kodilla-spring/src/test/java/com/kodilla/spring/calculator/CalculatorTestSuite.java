@@ -15,7 +15,7 @@ public class CalculatorTestSuite {
         //Given
         //When
         calculator.add(2,6);
-        calculator.sub(2, 6);
+        calculator.sub(2,6);
         calculator.mul(2,6);
         calculator.div(2,6);
         //Then
