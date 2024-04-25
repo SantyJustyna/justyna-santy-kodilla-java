@@ -1,5 +1,6 @@
 package com.kodilla.kodillaspring;
 
+import com.kodilla.spring.shape.Square;
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 import com.kodilla.spring.shape.Circle;
@@ -13,20 +14,6 @@ import static org.junit.jupiter.api.Assertions.*;
 
 @SpringBootTest
 class KodillaSpringApplicationTests {
-
-    @Test
-    void testGetUsername() {
-        //Given
-        ApplicationContext context =
-                new AnnotationConfigApplicationContext("com.kodilla.spring");
-        ForumUser user = context.getBean(ForumUser.class);
-
-        //When
-        String name = user.getUsername();
-
-        //Then
-        assertEquals("John Smith", name);
-    }
 
     @Test
     void testCircleLoadedIntoContainer() {
@@ -54,6 +41,17 @@ class KodillaSpringApplicationTests {
 
         //Then
         assertEquals("This is a triangle.", name);
+    }
+    @Test
+    void testSquareLoadedIntoContainer() {
+        //Given
+        ApplicationContext context =
+                new AnnotationConfigApplicationContext("com.kodilla.spring");
+        Shape shape = context.getBean(Square.class);
+        //When
+        String name = shape.getShapeName();
+        //Then
+        assertEquals("This is a square.", name);
     }
 
     @Test
