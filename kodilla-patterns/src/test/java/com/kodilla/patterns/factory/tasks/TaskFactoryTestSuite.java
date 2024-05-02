@@ -13,7 +13,7 @@ public class TaskFactoryTestSuite {
         TaskFactory factory = new TaskFactory();
 
         //When
-        Task drivingTask = factory.checkTask(TaskFactory.DRIVINGTASK);
+        Task drivingTask = factory.createTask(TaskFactory.DRIVINGTASK);
         drivingTask.executeTask();
 
         //Then
@@ -28,7 +28,7 @@ public class TaskFactoryTestSuite {
         TaskFactory factory = new TaskFactory();
 
         //When
-        Task paintingTask = factory.checkTask(TaskFactory.PAINTINGTASK);
+        Task paintingTask = factory.createTask(TaskFactory.PAINTINGTASK);
         paintingTask.executeTask();
 
         //Then
@@ -43,7 +43,7 @@ public class TaskFactoryTestSuite {
         TaskFactory factory = new TaskFactory();
 
         //When
-        Task shoppingTask = factory.checkTask(TaskFactory.SHOPPINGTASK);
+        Task shoppingTask = factory.createTask(TaskFactory.SHOPPINGTASK);
         shoppingTask.executeTask();
 
         //Then
