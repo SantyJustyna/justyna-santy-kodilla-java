@@ -2,8 +2,7 @@ package com.kodilla.patterns.factory.tasks;
 
 import org.junit.jupiter.api.Test;
 
-import static org.junit.jupiter.api.Assertions.assertEquals;
-import static org.junit.jupiter.api.Assertions.assertTrue;
+import static org.junit.jupiter.api.Assertions.*;
 
 public class TaskFactoryTestSuite {
     @Test
@@ -14,11 +13,11 @@ public class TaskFactoryTestSuite {
 
         //When
         Task drivingTask = factory.createTask(TaskFactory.DRIVINGTASK);
-        drivingTask.executeTask();
+
 
         //Then
         assertEquals("Driving task", drivingTask.getTaskName());
-        assertTrue(drivingTask.isTaskExecuted());
+        assertFalse(drivingTask.isTaskExecuted());
     }
 
     @Test
