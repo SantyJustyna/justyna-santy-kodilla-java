@@ -18,6 +18,7 @@ public class DbManagerTestSuite {
         //Then
         assertNotNull(dbManager.getConnection());
     }
+
     @Test
     void testSelectUsers() throws SQLException {
         //Given
@@ -82,11 +83,11 @@ public class DbManagerTestSuite {
 
         //Then
         int counter = 0;
-        while(rs.next()) {
+        while (rs.next()) {
             System.out.println(rs.getString("FIRSTNAME") + ", " +
                     rs.getString("LASTNAME") + ", " +
                     rs.getInt("POSTS_NUMBER"));
-            counter ++;
+            counter++;
         }
         rs.close();
         statement.close();
