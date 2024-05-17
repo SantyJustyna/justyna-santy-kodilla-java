@@ -22,4 +22,8 @@ public class Move {
     public SudokuElement getElement() {
         return element;
     }
+
+    public void setElement(SudokuElement element) {
+        this.element = element;
+    }
 }

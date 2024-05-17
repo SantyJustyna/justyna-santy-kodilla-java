@@ -8,6 +8,15 @@ public class Main {
 
         UserDialogs.chooseGame();
         Board board = new Board();
+        board.sampleBoard();
         System.out.println(board);
+
+
+
+
+
+
+
+
     }
 }
