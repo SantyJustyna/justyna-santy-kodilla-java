@@ -6,12 +6,20 @@ import com.sun.istack.NotNull;
 import javax.persistence.*;
 import java.util.ArrayList;
 import java.util.List;
-@NamedNativeQuery(
-        name = "Company.retrieveCompanyNameStartingWith",
-        query = "SELECT * FROM COMPANIES" +
-                " WHERE COMPANY_NAME LIKE CONCAT(:STARTS,'%')",
-        resultClass = Company.class
-)
+@NamedNativeQueries({
+        @NamedNativeQuery(
+                name = "Company.retrieveCompanyNameStartingWith",
+                query = "SELECT * FROM COMPANIES" +
+                        " WHERE COMPANY_NAME LIKE CONCAT(:STARTS,'%')",
+                resultClass = Company.class
+        ),
+        @NamedNativeQuery(
+                name = "Company.retrieveCompanyWithPartOfName",
+                query = "SELECT * FROM COMPANIES" +
+                        " WHERE COMPANY_NAME LIKE CONCAT('%', :ARG ,'%')",
+                resultClass = Company.class
+        )
+})
 @Entity
 @Table(name = "COMPANIES")
 public class Company {
